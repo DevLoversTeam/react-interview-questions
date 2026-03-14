@@ -1,6 +1,3 @@
-**Read in other languages: [English 🇺🇸](README.en.md),
-[Українська 🇺🇦](README.md).**
-
 <h1>
   React <img src="./assets/react.svg" width="40" height="40" />
 </h1>
