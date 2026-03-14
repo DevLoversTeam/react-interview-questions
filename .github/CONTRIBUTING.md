@@ -1,9 +1,11 @@
-# 🧠 Як зробити внесок у DevLovers
+# 🧠 How to contribute to DevLovers
 
-Дякуємо, що хочете зробити внесок у наш проєкт! Нижче описано кілька простих правил, які допоможуть вам підготувати якісний pull request.
+Thank you for wanting to contribute to our project! Below are some simple rules
+to help you prepare a quality pull request.
 
-## 🔧 Формат доповнення
+## 🔧 Supplement format
 
-- Кожне питання повинне бути оформлене в HTML-елементі `<details>` зі структурою:
+- Each question should be formatted in an HTML element `<details>` with the
+  structure:
 
 ![Code](../assets/code.png)
