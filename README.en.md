@@ -1,5 +1,5 @@
 **Read in other languages: [English 🇺🇸](README.en.md),
-[Polska 🇵🇱](README.pl.md), [German 🇩🇪](README.de.md),
+[Polska 🇵🇱](README.pl.md), [German 🇩🇪](README.de.md), [French 🇫🇷](README.fr.md),
 [Українська 🇺🇦](README.md).**
 
 <h1>

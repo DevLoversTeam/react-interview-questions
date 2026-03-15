@@ -1,5 +1,5 @@
 **Read in other languages: [English 🇺🇸](README.en.md),
-[Polska 🇵🇱](README.pl.md), [German 🇩🇪](README.de.md),
+[Polska 🇵🇱](README.pl.md), [German 🇩🇪](README.de.md), [French 🇫🇷](README.fr.md),
 [Українська 🇺🇦](README.md).**
 
 <h1>
@@ -1675,8 +1675,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 #### React
 
-**Komponent wyższego rzędu** to funkcja, która przyjmuje komponent jako
-argument wejściowy i zwraca nowy komponent, rozszerzając jego funkcjonalność.
+**Komponent wyższego rzędu** to funkcja, która przyjmuje komponent jako argument
+wejściowy i zwraca nowy komponent, rozszerzając jego funkcjonalność.
 
 #### Składnia HOC:
 
@@ -1918,13 +1918,13 @@ wyskakujących.
 - Pozwalają renderować elementy w innym miejscu DOM bez naruszania struktury
   komponentów React.
 
-- Są przydatne wtedy, gdy trzeba renderować elementy ponad inną zawartością,
-  na przykład okna modalne albo wyskakujące menu.
+- Są przydatne wtedy, gdy trzeba renderować elementy ponad inną zawartością, na
+  przykład okna modalne albo wyskakujące menu.
 
 #### Jak działają portale:
 
-- Portal pozwala wysłać zawartość do dowolnego miejsca DOM, nawet poza
-  głównym kontenerem React.
+- Portal pozwala wysłać zawartość do dowolnego miejsca DOM, nawet poza głównym
+  kontenerem React.
 
 #### Przyklad użycia portalu:
 
@@ -1962,9 +1962,9 @@ const App = () => {
 
 #### Cechy:
 
-- Chociaż elementy renderowane przez portale znajdują się poza główną
-  hierarchią komponentów React, nadal mają dostęp do kontekstu, stanu i propsów
-  swoich rodziców.
+- Chociaż elementy renderowane przez portale znajdują się poza główną hierarchią
+  komponentów React, nadal mają dostęp do kontekstu, stanu i propsów swoich
+  rodziców.
 
 - Portale są przydatne, gdy elementy powinny być umieszczone "nad" inną
   zawartością albo na innym poziomie hierarchii DOM, na przykład gdy okno
@@ -1994,8 +1994,8 @@ renderowaniem, rzadko używana.
 
 `render()`: Renderuje JSX do Virtual DOM.
 
-`componentDidMount()`: Jest wywoływana zaraz po dodaniu komponentu do DOM.
-Używa się jej do zapytań API i inicjalizacji bibliotek.
+`componentDidMount()`: Jest wywoływana zaraz po dodaniu komponentu do DOM. Używa
+się jej do zapytań API i inicjalizacji bibliotek.
 
 2. **Aktualizacja (Updating):** Gdy zmieniają się propsy albo stan.
 
@@ -2026,20 +2026,20 @@ subskrypcji.
 
 #### Tabela metod:
 
-| Faza                 | Metoda                       | Opis                                     |
-| -------------------- | ---------------------------- | ---------------------------------------- |
-| **Montowanie**       | `constructor()`              | Inicjalizacja stanu i konfiguracja.      |
-|                      | `getDerivedStateFromProps()` | Aktualizacja stanu przed renderem.       |
-|                      | `render()`                   | Renderowanie JSX do Virtual DOM.         |
-|                      | `componentDidMount()`        | Wykonuje się po dodaniu do DOM.          |
-| **Aktualizacja**     | `getDerivedStateFromProps()` | Aktualizacja stanu przed renderem.       |
-|                      | `shouldComponentUpdate()`    | Określa, czy potrzebny jest rerender.    |
-|                      | `render()`                   | Aktualizuje Virtual DOM.                 |
-|                      | `getSnapshotBeforeUpdate()`  | Pobiera migawkę stanu przed aktualizacją.|
-|                      | `componentDidUpdate()`       | Wykonuje się po aktualizacji.            |
-| **Odmontowanie**     | `componentWillUnmount()`     | Czyszczenie zasobów przed usunięciem.    |
-| **Obsługa błędów**   | `getDerivedStateFromError()` | Aktualizuje stan w razie błędu.          |
-|                      | `componentDidCatch()`        | Logowanie błędów.                        |
+| Faza               | Metoda                       | Opis                                      |
+| ------------------ | ---------------------------- | ----------------------------------------- |
+| **Montowanie**     | `constructor()`              | Inicjalizacja stanu i konfiguracja.       |
+|                    | `getDerivedStateFromProps()` | Aktualizacja stanu przed renderem.        |
+|                    | `render()`                   | Renderowanie JSX do Virtual DOM.          |
+|                    | `componentDidMount()`        | Wykonuje się po dodaniu do DOM.           |
+| **Aktualizacja**   | `getDerivedStateFromProps()` | Aktualizacja stanu przed renderem.        |
+|                    | `shouldComponentUpdate()`    | Określa, czy potrzebny jest rerender.     |
+|                    | `render()`                   | Aktualizuje Virtual DOM.                  |
+|                    | `getSnapshotBeforeUpdate()`  | Pobiera migawkę stanu przed aktualizacją. |
+|                    | `componentDidUpdate()`       | Wykonuje się po aktualizacji.             |
+| **Odmontowanie**   | `componentWillUnmount()`     | Czyszczenie zasobów przed usunięciem.     |
+| **Obsługa błędów** | `getDerivedStateFromError()` | Aktualizuje stan w razie błędu.           |
+|                    | `componentDidCatch()`        | Logowanie błędów.                         |
 
 #### Współczesne podejście:
 
@@ -2057,13 +2057,13 @@ W komponentach funkcyjnych zamiast metod cyklu życia używa się **hooków**:
 
 #### React
 
-- `shouldComponentUpdate` to metoda cyklu życia w komponentach klasowych,
-  która określa, czy komponent powinien zostać ponownie wyrenderowany.
+- `shouldComponentUpdate` to metoda cyklu życia w komponentach klasowych, która
+  określa, czy komponent powinien zostać ponownie wyrenderowany.
 
 #### Jak działa:
 
-- Domyślnie zwraca `true`, co oznacza rerender przy każdej zmianie `state`
-  albo `props`.
+- Domyślnie zwraca `true`, co oznacza rerender przy każdej zmianie `state` albo
+  `props`.
 
 - Jeśli zwraca `false`, React nie wyrenderuje komponentu ponownie, nawet jeśli
   `props` albo `state` się zmieniły.
@@ -2305,14 +2305,14 @@ const memoizedCallback = useCallback(() => {
 
 #### React
 
-| **Zaleta**                           | **Opis**                                                                                       |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------- |
-| **Mniej kodu**                       | Hooki pozwalają uniknąć klas i zmniejszyć objętość kodu.                                       |
-| **Lepsza czytelność**                | Kod z hookami jest łatwiejszy do zrozumienia i utrzymania.                                     |
-| **Ponowne wykorzystanie logiki**     | Custom Hooks pozwalają ponownie wykorzystywać logikę między komponentami.                      |
-| **Uproszczone zarządzanie stanem**   | Użycie `useState` i `useReducer` upraszcza zarządzanie stanem.                                 |
-| **Elastyczność w użyciu efektów**    | `useEffect` pozwala wykonywać efekty uboczne bez potrzeby używania klasowych metod cyklu życia. |
-| **Łatwiejsza migracja**              | Ułatwia przejście z komponentów klasowych na funkcyjne.                                        |
+| **Zaleta**                         | **Opis**                                                                                        |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Mniej kodu**                     | Hooki pozwalają uniknąć klas i zmniejszyć objętość kodu.                                        |
+| **Lepsza czytelność**              | Kod z hookami jest łatwiejszy do zrozumienia i utrzymania.                                      |
+| **Ponowne wykorzystanie logiki**   | Custom Hooks pozwalają ponownie wykorzystywać logikę między komponentami.                       |
+| **Uproszczone zarządzanie stanem** | Użycie `useState` i `useReducer` upraszcza zarządzanie stanem.                                  |
+| **Elastyczność w użyciu efektów**  | `useEffect` pozwala wykonywać efekty uboczne bez potrzeby używania klasowych metod cyklu życia. |
+| **Łatwiejsza migracja**            | Ułatwia przejście z komponentów klasowych na funkcyjne.                                         |
 
 </details>
 
@@ -2321,13 +2321,13 @@ const memoizedCallback = useCallback(() => {
 
 #### React
 
-| **Wada**                               | **Opis**                                                                                     |
-| -------------------------------------- | -------------------------------------------------------------------------------------------- |
-| **Większa liczba rerenderów**          | Nieprawidłowe użycie hooków, szczególnie `useEffect`, może powodować zbędne rerendery.      |
-| **Trudniejsze zrozumienie logiki**     | Logika komponentu może być rozproszona między kilkoma `useEffect`, co utrudnia debugowanie. |
-| **Brak jawnego cyklu życia**           | W przeciwieństwie do komponentów klasowych hooki nie mają wyraźnie wydzielonych metod cyklu życia. |
-| **Możliwe problemy z optymalizacją**   | Nieprawidłowe użycie `useCallback` i `useMemo` może prowadzić do nieefektywnego działania.   |
-| **Złożoność w dużych projektach**      | W dużych aplikacjach hooki mogą utrudniać zarządzanie stanem i efektami ubocznymi.          |
+| **Wada**                             | **Opis**                                                                                           |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| **Większa liczba rerenderów**        | Nieprawidłowe użycie hooków, szczególnie `useEffect`, może powodować zbędne rerendery.             |
+| **Trudniejsze zrozumienie logiki**   | Logika komponentu może być rozproszona między kilkoma `useEffect`, co utrudnia debugowanie.        |
+| **Brak jawnego cyklu życia**         | W przeciwieństwie do komponentów klasowych hooki nie mają wyraźnie wydzielonych metod cyklu życia. |
+| **Możliwe problemy z optymalizacją** | Nieprawidłowe użycie `useCallback` i `useMemo` może prowadzić do nieefektywnego działania.         |
+| **Złożoność w dużych projektach**    | W dużych aplikacjach hooki mogą utrudniać zarządzanie stanem i efektami ubocznymi.                 |
 
 </details>
 
@@ -2336,13 +2336,13 @@ const memoizedCallback = useCallback(() => {
 
 #### React
 
-| **Zasada**                            | **Opis**                                                                                                                            |
-| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Używanie tylko w funkcjach**        | Hooki można wywoływać tylko w komponentach funkcyjnych albo w custom hooks.                                                        |
-| **Zachowanie kolejności wywołań**     | Hooków nie można wywoływać warunkowo (`if`, `for`, `while`), bo zaburzy to kolejność wywołań.                                     |
-| **Wywołanie tylko na najwyższym poziomie** | Hooków nie można wywoływać wewnątrz zagnieżdżonych funkcji ani handlerów zdarzeń.                                             |
-| **Nazewnictwo custom hooks**          | Custom hooks powinny zaczynać się od `use`, na przykład `useAuth`.                                                                  |
-| **Przestrzeganie zasad zależności**   | W `useEffect`, `useMemo` i `useCallback` trzeba poprawnie wskazywać zależności (`[]`), aby uniknąć nieprzewidywalnego zachowania. |
+| **Zasada**                                 | **Opis**                                                                                                                          |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Używanie tylko w funkcjach**             | Hooki można wywoływać tylko w komponentach funkcyjnych albo w custom hooks.                                                       |
+| **Zachowanie kolejności wywołań**          | Hooków nie można wywoływać warunkowo (`if`, `for`, `while`), bo zaburzy to kolejność wywołań.                                     |
+| **Wywołanie tylko na najwyższym poziomie** | Hooków nie można wywoływać wewnątrz zagnieżdżonych funkcji ani handlerów zdarzeń.                                                 |
+| **Nazewnictwo custom hooks**               | Custom hooks powinny zaczynać się od `use`, na przykład `useAuth`.                                                                |
+| **Przestrzeganie zasad zależności**        | W `useEffect`, `useMemo` i `useCallback` trzeba poprawnie wskazywać zależności (`[]`), aby uniknąć nieprzewidywalnego zachowania. |
 
 </details>
 
@@ -2417,8 +2417,8 @@ function Counter() {
 
 #### useCallback()
 
-Memoizuje funkcję, aby nie była tworzona od nowa przy każdym renderze. Jest
-to przydatne przy przekazywaniu callbacków do komponentów podrzędnych.
+Memoizuje funkcję, aby nie była tworzona od nowa przy każdym renderze. Jest to
+przydatne przy przekazywaniu callbacków do komponentów podrzędnych.
 
 - **Przyklad:**
 
@@ -2440,8 +2440,8 @@ function Parent() {
 
 #### useMemo()
 
-Memoizuje obliczenia, aby nie wykonywać ich ponownie przy każdym renderze,
-jeśli zależności się nie zmieniły.
+Memoizuje obliczenia, aby nie wykonywać ich ponownie przy każdym renderze, jeśli
+zależności się nie zmieniły.
 
 #### Przyklad:
 
@@ -2460,8 +2460,8 @@ return <div>Wynik: {result}</div>;
 
 #### useImperativeHandle()
 
-Pozwala kontrolować zachowanie refa w komponencie podrzędnym. Używa się go
-razem z `forwardRef()`.
+Pozwala kontrolować zachowanie refa w komponencie podrzędnym. Używa się go razem
+z `forwardRef()`.
 
 #### Przyklad:
 
@@ -2536,8 +2536,8 @@ function LayoutEffectExample() {
 
 #### React
 
-Aby wykonać operację tylko raz podczas początkowego renderowania w
-komponentach funkcyjnych, użyj `useEffect` z pustą tablicą zależności (`[]`):
+Aby wykonać operację tylko raz podczas początkowego renderowania w komponentach
+funkcyjnych, użyj `useEffect` z pustą tablicą zależności (`[]`):
 
 #### Przyklad:
 
@@ -2571,8 +2571,8 @@ useEffect(() => {
 }, []);
 ```
 
-To podejście jest przydatne przy inicjalizacji zapytań API, subskrypcji,
-timerów i podobnych zadań.
+To podejście jest przydatne przy inicjalizacji zapytań API, subskrypcji, timerów
+i podobnych zadań.
 
 </details>
 
@@ -2592,8 +2592,8 @@ komponentów bez potrzeby przekazywania ich przez propsy na każdym poziomie.
 const MyContext = React.createContext(defaultValue);
 ```
 
-2. **Provider** to komponent, który udostępnia wartość kontekstu. Obejmuje
-   część drzewa komponentów i przekazuje wartość w dół przez `value`.
+2. **Provider** to komponent, który udostępnia wartość kontekstu. Obejmuje część
+   drzewa komponentów i przekazuje wartość w dół przez `value`.
 
 ```jsx
 <MyContext.Provider value={}>
@@ -2777,12 +2777,12 @@ potrzebuje. To właśnie jest **prop drilling**.
 
 #### Jak uniknąć prop drilling?
 
-| **Metoda**                                          | **Opis**                                                                |
-| --------------------------------------------------- | ----------------------------------------------------------------------- |
-| **Context API**                                     | Pozwala przekazywać dane bezpośrednio do potrzebnych komponentów.       |
-| **Zewnętrzne stany (Redux, Zustand, Jotai, Recoil)**| Służą do zarządzania globalnym stanem bez przekazywania propsów.        |
-| **Komponenty z render props**                       | Pozwalają przekazywać funkcje zamiast propsów.                          |
-| **Custom Hooks**                                    | Wynoszą logikę do osobnych funkcji dla dostępu do wspólnych danych.     |
+| **Metoda**                                           | **Opis**                                                            |
+| ---------------------------------------------------- | ------------------------------------------------------------------- |
+| **Context API**                                      | Pozwala przekazywać dane bezpośrednio do potrzebnych komponentów.   |
+| **Zewnętrzne stany (Redux, Zustand, Jotai, Recoil)** | Służą do zarządzania globalnym stanem bez przekazywania propsów.    |
+| **Komponenty z render props**                        | Pozwalają przekazywać funkcje zamiast propsów.                      |
+| **Custom Hooks**                                     | Wynoszą logikę do osobnych funkcji dla dostępu do wspólnych danych. |
 
 #### Przykład użycia Context API zamiast prop drilling
 
@@ -2825,11 +2825,11 @@ nim przez przewidywalne zmiany.
 
 1. **Jedno źródło prawdy**: cały stan jest przechowywany w jednym globalnym
    `store`, co ułatwia śledzenie zmian.
-2. **Stan jest tylko do odczytu**: nie można zmieniać stanu bezpośrednio,
-   tylko przez `action`.
+2. **Stan jest tylko do odczytu**: nie można zmieniać stanu bezpośrednio, tylko
+   przez `action`.
 3. **Zmiany zachodzą przez czyste funkcje**: stan zmienia się za pomocą
-   reducerów, które przyjmują bieżący stan i `action`, a następnie zwracają
-   nowy stan.
+   reducerów, które przyjmują bieżący stan i `action`, a następnie zwracają nowy
+   stan.
 
 #### Główne elementy Redux:
 
@@ -2851,9 +2851,8 @@ prostych projektach bywa często zbędny.
 
 Poza Redux istnieje wiele bibliotek do zarządzania stanem w React:
 
-1. **React Context API** to wbudowany mechanizm React do przekazywania stanu
-   bez przerzucania propsów. Dobrze sprawdza się w małych i średnich
-   aplikacjach.
+1. **React Context API** to wbudowany mechanizm React do przekazywania stanu bez
+   przerzucania propsów. Dobrze sprawdza się w małych i średnich aplikacjach.
 
 2. **Zustand** jest prostszy i lżejszy od Redux, nie wymaga reducerów ani
    actions. Korzysta z bardziej bezpośredniego podejścia i działa przez hooki.
@@ -2886,8 +2885,7 @@ dotyczących wydajności.
 #### React
 
 **Redux Thunk** to middleware dla Redux, które pozwala wykonywać operacje
-asynchroniczne, na przykład zapytania do API, przed wysłaniem zmian do
-`store`.
+asynchroniczne, na przykład zapytania do API, przed wysłaniem zmian do `store`.
 
 #### Jak działa:
 
@@ -2939,8 +2937,8 @@ albo **RTK Query** jako alternatywy.
 
 #### React
 
-**Redux Saga** to middleware dla Redux, które używa generatorów (`function*`)
-do zarządzania asynchronicznymi operacjami w aplikacji.
+**Redux Saga** to middleware dla Redux, które używa generatorów (`function*`) do
+zarządzania asynchronicznymi operacjami w aplikacji.
 
 #### Jak działa:
 
@@ -3020,13 +3018,13 @@ aktualizacjami UI.
    renderowanie może odbywać się bez blokowania głównego wątku.
 
 3. **Priorytety aktualizacji:** Fiber pozwala nadawać priorytet różnym typom
-   aktualizacji, na przykład renderowanie animacji może mieć wyższy priorytet,
-   a zmiany stanu niższy. Dzięki temu React skuteczniej zarządza złożonymi
+   aktualizacji, na przykład renderowanie animacji może mieć wyższy priorytet, a
+   zmiany stanu niższy. Dzięki temu React skuteczniej zarządza złożonymi
    aktualizacjami.
 
-4. **Dzielenie renderowania na podzadania:** W starszych wersjach React wszystkie
-   zmiany były przetwarzane w jednym kroku. Fiber dzieli renderowanie na
-   mniejsze podzadania, co pozwala React wykonywać pracę etapami i obsługiwać
+4. **Dzielenie renderowania na podzadania:** W starszych wersjach React
+   wszystkie zmiany były przetwarzane w jednym kroku. Fiber dzieli renderowanie
+   na mniejsze podzadania, co pozwala React wykonywać pracę etapami i obsługiwać
    inne ważne operacje, na przykład zdarzenia, pomiędzy tymi etapami.
 
 5. **Lepsze wsparcie animacji i przejść:** Dzięki renderowaniu asynchronicznemu
@@ -3037,9 +3035,9 @@ aktualizacjami UI.
 
 W starszych wersjach React cały proces renderowania był synchroniczny, od
 początku do końca. Oznaczało to, że ciężkie obliczenia blokowały renderowanie
-interfejsu. W React Fiber renderowanie zostało podzielone na małe zadania,
-które mogą być wykonywane asynchronicznie. W razie potrzeby React może przerwać
-jedno zadanie i dokończyć je później, nie blokując innych operacji, takich jak
+interfejsu. W React Fiber renderowanie zostało podzielone na małe zadania, które
+mogą być wykonywane asynchronicznie. W razie potrzeby React może przerwać jedno
+zadanie i dokończyć je później, nie blokując innych operacji, takich jak
 aktualizacje UI albo obsługa zdarzeń.
 
 #### Fiber pozwala React:
@@ -3080,8 +3078,8 @@ między komponentami.
 1. **Komponenty, które mają współdzielić dane, nie powinny każdy przechowywać
    własnego stanu.**
 
-2. **Stan jest podnoszony do komponentu nadrzędnego, który przekazuje dane
-   przez propsy komponentom podrzędnym.**
+2. **Stan jest podnoszony do komponentu nadrzędnego, który przekazuje dane przez
+   propsy komponentom podrzędnym.**
 
 #### Jak to działa:
 
@@ -3212,8 +3210,8 @@ export default ControlledForm;
 
 #### Różnice względem komponentów niekontrolowanych:
 
-- W komponentach kontrolowanych wartość formularza jest kontrolowana przez
-  React za pomocą `state`.
+- W komponentach kontrolowanych wartość formularza jest kontrolowana przez React
+  za pomocą `state`.
 
 - W komponentach niekontrolowanych wartość jest przechowywana w samym DOM, a
   dostęp do niej odbywa się przez `ref`.
@@ -3437,8 +3435,8 @@ export default UncontrolledForm;
 
 - Używa `state`.
 
-- Lepiej nadaje się do bardziej złożonych formularzy wymagających walidacji
-  albo synchronizacji.
+- Lepiej nadaje się do bardziej złożonych formularzy wymagających walidacji albo
+  synchronizacji.
 
 2. **Formularz niekontrolowany:**
 
@@ -3558,14 +3556,14 @@ TypeScript robi się to już na poziomie samego języka.
 
 #### Różnica między React Router a zwykłym routingiem:
 
-| Kryterium                  | React Router                                   | Zwykły routing (Server-Side Routing)               |
-| -------------------------- | ---------------------------------------------- | -------------------------------------------------- |
-| **Typ routingu**           | Kliencki (SPA)                                 | Serwerowy (MPA)                                    |
-| **Przejście między stronami** | Bez przeładowania strony, JavaScript aktualizuje URL | Przeładowanie strony przy każdym przejściu    |
-| **Szybkość**               | Szybszy, bo nie wysyła ponownie żądania do serwera | Wolniejszy przez nowe żądania HTTP             |
-| **SEO**                    | Gorsze bez SSR, choć Next.js rozwiązuje problem | Lepsze, bo treść jest ładowana z serwera          |
-| **Obsługa danych**         | Dynamiczne renderowanie komponentów            | Ładowanie HTML po stronie serwera                  |
-| **Konfiguracja**           | Wymaga React Router                            | Korzysta ze standardowych możliwości serwera       |
+| Kryterium                     | React Router                                         | Zwykły routing (Server-Side Routing)         |
+| ----------------------------- | ---------------------------------------------------- | -------------------------------------------- |
+| **Typ routingu**              | Kliencki (SPA)                                       | Serwerowy (MPA)                              |
+| **Przejście między stronami** | Bez przeładowania strony, JavaScript aktualizuje URL | Przeładowanie strony przy każdym przejściu   |
+| **Szybkość**                  | Szybszy, bo nie wysyła ponownie żądania do serwera   | Wolniejszy przez nowe żądania HTTP           |
+| **SEO**                       | Gorsze bez SSR, choć Next.js rozwiązuje problem      | Lepsze, bo treść jest ładowana z serwera     |
+| **Obsługa danych**            | Dynamiczne renderowanie komponentów                  | Ładowanie HTML po stronie serwera            |
+| **Konfiguracja**              | Wymaga React Router                                  | Korzysta ze standardowych możliwości serwera |
 
 </details>
 
@@ -3655,8 +3653,8 @@ function Profile() {
 
 #### Sposoby używania stylów w komponentach React:
 
-1. **Style inline**: Style przekazuje się bezpośrednio jako obiekt przez
-   atrybut `style`.
+1. **Style inline**: Style przekazuje się bezpośrednio jako obiekt przez atrybut
+   `style`.
 
 ```jsx
 function InlineStyle() {
@@ -3839,8 +3837,8 @@ stylach.
 
 1. **Memoizacja komponentów:**
 
-- Używaj `React.memo` do memoizacji komponentów funkcyjnych, które nie zależą
-  od częstych zmian propsów.
+- Używaj `React.memo` do memoizacji komponentów funkcyjnych, które nie zależą od
+  częstych zmian propsów.
 - Używaj `PureComponent` w komponentach klasowych.
 
 2. **Memoizacja wartości i funkcji:**
@@ -3851,8 +3849,8 @@ stylach.
 
 3. **Optymalizacja renderowania list:**
 
-Zawsze używaj unikalnego `key` dla elementów list. Unikaj ponownego
-renderowania komponentów bez potrzeby.
+Zawsze używaj unikalnego `key` dla elementów list. Unikaj ponownego renderowania
+komponentów bez potrzeby.
 
 4. **Dynamiczne ładowanie komponentów:**
 
@@ -3925,14 +3923,14 @@ i poprawić ogólną wydajność aplikacji.
 
 #### Różnica między memo a useMemo
 
-| Kryterium               | memo                                                              | useMemo                                                 |
-| ----------------------- | ----------------------------------------------------------------- | ------------------------------------------------------- |
-| **Co to jest?**         | Funkcja wyższego rzędu (HOC)                                      | Hook                                                    |
-| **Przeznaczenie**       | Zapobiega ponownemu renderowi komponentu, jeśli propsy się nie zmieniły | Zapamiętuje wynik obliczenia między renderami     |
-| **Gdzie się używa?**    | Opakowuje komponent                                               | Wewnątrz komponentu                                     |
-| **Przykład użycia**     | `export default memo(MyComponent);`                               | `const value = useMemo(() => compute(), [deps]);`       |
-| **Co cache'uje?**       | Cały komponent                                                    | Wynik funkcji                                           |
-| **Kiedy stosować?**     | Gdy komponent renderuje się z tymi samymi propsami bez zmian      | Gdy obliczenie jest kosztowne i zależy od zmiennych     |
+| Kryterium            | memo                                                                    | useMemo                                             |
+| -------------------- | ----------------------------------------------------------------------- | --------------------------------------------------- |
+| **Co to jest?**      | Funkcja wyższego rzędu (HOC)                                            | Hook                                                |
+| **Przeznaczenie**    | Zapobiega ponownemu renderowi komponentu, jeśli propsy się nie zmieniły | Zapamiętuje wynik obliczenia między renderami       |
+| **Gdzie się używa?** | Opakowuje komponent                                                     | Wewnątrz komponentu                                 |
+| **Przykład użycia**  | `export default memo(MyComponent);`                                     | `const value = useMemo(() => compute(), [deps]);`   |
+| **Co cache'uje?**    | Cały komponent                                                          | Wynik funkcji                                       |
+| **Kiedy stosować?**  | Gdy komponent renderuje się z tymi samymi propsami bez zmian            | Gdy obliczenie jest kosztowne i zależy od zmiennych |
 
 #### Kiedy używać?
 
@@ -4005,8 +4003,8 @@ DOM albo komponentów, z pominięciem standardowego mechanizmu propsów i stanu.
 const myRef = React.createRef();
 ```
 
-2. **Przypisanie refa do elementu:** Ref jest przekazywany do elementu DOM
-   przez atrybut `ref`.
+2. **Przypisanie refa do elementu:** Ref jest przekazywany do elementu DOM przez
+   atrybut `ref`.
 
 ```jsx
 <input ref={myRef} />
@@ -4019,8 +4017,8 @@ const myRef = React.createRef();
 myRef.current.focus();
 ```
 
-4. **Ograniczenia:** Refy nie powinny być używane do zarządzania stanem.
-   Służą tylko do interakcji z DOM wtedy, gdy jest to potrzebne, na przykład do
+4. **Ograniczenia:** Refy nie powinny być używane do zarządzania stanem. Służą
+   tylko do interakcji z DOM wtedy, gdy jest to potrzebne, na przykład do
    ustawiania fokusu, zaznaczania tekstu albo obsługi animacji.
 
 5. **Komponenty funkcyjne:** W React 16.8 i nowszych w komponentach funkcyjnych
@@ -4125,9 +4123,9 @@ const html = ReactDOMServer.renderToString(<App />);
 const html = ReactDOMServer.renderToStaticMarkup(<App />);
 ```
 
-3. **`ReactDOMServer.hydrate()`:** Używa się po stronie klienta do
-   "hydracji" HTML wyrenderowanego na serwerze, czyli do podłączenia
-   interaktywności do już istniejącego HTML.
+3. **`ReactDOMServer.hydrate()`:** Używa się po stronie klienta do "hydracji"
+   HTML wyrenderowanego na serwerze, czyli do podłączenia interaktywności do już
+   istniejącego HTML.
 
 ```jsx
 ReactDOM.hydrate(<App />, document.getElementById('root'));
@@ -4223,8 +4221,8 @@ aplikacji.
 const MyComponent = React.lazy(() => import('./MyComponent'));
 ```
 
-2. **Opakowanie za pomocą `React.Suspense`:** Następnie użyj
-   `React.Suspense`, aby pokazać loader podczas ładowania komponentu.
+2. **Opakowanie za pomocą `React.Suspense`:** Następnie użyj `React.Suspense`,
+   aby pokazać loader podczas ładowania komponentu.
 
 ```jsx
 function App() {
@@ -4245,9 +4243,9 @@ function App() {
 
 - `React.lazy()` przyjmuje funkcję, która dynamicznie importuje moduł.
 
-- `React.Suspense` opakuje komponent używający `React.lazy()` i pokaże
-  zawartość zastępczą, w tym przypadku tekst "Ladowanie...", dopóki komponent
-  się nie załaduje.
+- `React.Suspense` opakuje komponent używający `React.lazy()` i pokaże zawartość
+  zastępczą, w tym przypadku tekst "Ladowanie...", dopóki komponent się nie
+  załaduje.
 
 #### Zalety:
 
@@ -4317,7 +4315,8 @@ podzielić kod na części, aby skrócić czas ładowania strony.
 8. **Zarządzanie sekretami:**
 
 - Nie przechowuj sekretów, takich jak klucze API czy hasła, w kodzie klienta.
-  Powinny znajdować się na serwerze albo w bezpiecznych zmiennych środowiskowych.
+  Powinny znajdować się na serwerze albo w bezpiecznych zmiennych
+  środowiskowych.
 
 9. **Stosowanie Content Security Policy (CSP):**
 
@@ -4347,8 +4346,8 @@ obsługiwać je bez całkowitego zatrzymania aplikacji.
 - Error Boundary to komponent, który opakowuje inne komponenty i może
   przechwytywać błędy pojawiające się w ich kodzie.
 
-- **Error Boundaries** przechwytują tylko błędy występujące w ich potomkach.
-  Nie przechwytują błędów wewnątrz samego Error Boundary.
+- **Error Boundaries** przechwytują tylko błędy występujące w ich potomkach. Nie
+  przechwytują błędów wewnątrz samego Error Boundary.
 
 #### Jak zaimplementować Error Boundary:
 
@@ -4389,8 +4388,8 @@ class ErrorBoundary extends React.Component {
 }
 ```
 
-2. **Użycie Error Boundary:** Owijamy komponenty, które mogą powodować błędy,
-   w `ErrorBoundary`.
+2. **Użycie Error Boundary:** Owijamy komponenty, które mogą powodować błędy, w
+   `ErrorBoundary`.
 
 ```jsx
 const App = () => {
@@ -4628,8 +4627,8 @@ przetwarzanie przed aktualizacją stanu.
 
 Odwrotny przepływ danych (`Reverse Data Flow`) w React oznacza przekazywanie
 zmian stanu z komponentu podrzędnego do komponentu nadrzędnego. Jest to
-przeciwieństwo zwykłego przepływu danych, w którym komponent nadrzędny przekazuje
-propsy komponentowi podrzędnemu.
+przeciwieństwo zwykłego przepływu danych, w którym komponent nadrzędny
+przekazuje propsy komponentowi podrzędnemu.
 
 #### W React odwrotny przepływ danych zwykle realizuje się przez:
 
@@ -4639,8 +4638,8 @@ propsy komponentowi podrzędnemu.
   poinformować komponent nadrzędny o zmianach swojego stanu albo wykonać
   określone działania.
 
-- Na przykład przy aktualizacji wartości w komponencie podrzędnym można
-  wywołać funkcję z komponentu nadrzędnego, która zaktualizuje stan.
+- Na przykład przy aktualizacji wartości w komponencie podrzędnym można wywołać
+  funkcję z komponentu nadrzędnego, która zaktualizuje stan.
 
 2. **Przykład:**
 
@@ -4677,8 +4676,7 @@ ponownie.
 
 #### Aby zapobiegać mutacji stanu, należy:
 
-1. **Tworzyć kopie danych** przed ich zmianą, na przykład dla tablic i
-   obiektów:
+1. **Tworzyć kopie danych** przed ich zmianą, na przykład dla tablic i obiektów:
 
 - Dla tablic: `setItems([...items, newItem])`
 - Dla obiektów: `setUser({ ...user, name: 'John' })`
@@ -4716,12 +4714,12 @@ root.render(
 
 #### Zalety Strict Mode
 
-| **Funkcja**                                      | **Opis**                                                                                                    |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| **Funkcja**                                      | **Opis**                                                                                                                 |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
 | **Wykrywanie niebezpiecznych metod cyklu życia** | Ostrzega o przestarzałych metodach, takich jak `componentWillMount`, `componentWillReceiveProps`, `componentWillUpdate`. |
-| **Podwójne wywołanie funkcji w developmentcie**  | Pomaga wykrywać efekty uboczne w `useEffect` i innych hookach.                                              |
-| **Ostrzeganie o przestarzałym API**              | Wskazuje stare konteksty i niebezpieczne wzorce.                                                            |
-| **Wykrywanie nieprzewidywalnego zachowania**     | Na przykład wywołuje `useEffect` dwa razy, aby sprawdzić poprawność czyszczenia efektów.                   |
+| **Podwójne wywołanie funkcji w developmentcie**  | Pomaga wykrywać efekty uboczne w `useEffect` i innych hookach.                                                           |
+| **Ostrzeganie o przestarzałym API**              | Wskazuje stare konteksty i niebezpieczne wzorce.                                                                         |
+| **Wykrywanie nieprzewidywalnego zachowania**     | Na przykład wywołuje `useEffect` dwa razy, aby sprawdzić poprawność czyszczenia efektów.                                 |
 
 #### Czy warto go używać?
 
@@ -4888,9 +4886,9 @@ ułatwiają sterowanie złożonymi animacjami.
    React. Pozwala tworzyć animacje wejścia, wyjścia i zmian stanu komponentów,
    dając dużą elastyczność w definiowaniu przejść.
 
-5. **Lottie for React** pozwala łatwo osadzać animacje stworzone w After
-   Effects w formacie JSON. Nadaje się do złożonych animacji, takich jak ikony
-   albo elementy interaktywne.
+5. **Lottie for React** pozwala łatwo osadzać animacje stworzone w After Effects
+   w formacie JSON. Nadaje się do złożonych animacji, takich jak ikony albo
+   elementy interaktywne.
 
 </details>
 
@@ -4953,8 +4951,7 @@ react-devtools
 </React.StrictMode>
 ```
 
-- Nie powoduje błędów sam w sobie, a jedynie pomaga wykryć potencjalne
-  problemy.
+- Nie powoduje błędów sam w sobie, a jedynie pomaga wykryć potencjalne problemy.
 
 7. **Inspekcja hooków**
 
@@ -4978,18 +4975,18 @@ wydajności i kontekstu. Używaj `Profiler` do optymalizacji oraz `Components` d
 #### Najpopularniejsze lintery do React:
 
 1. **ESLint** to najpopularniejszy linter dla `JavaScript`, który wspiera
-   `React` przez plugin `eslint-plugin-react`. Sprawdza styl kodu, wykrywa
-   błędy i może działać razem z narzędziami takimi jak `Prettier`.
+   `React` przez plugin `eslint-plugin-react`. Sprawdza styl kodu, wykrywa błędy
+   i może działać razem z narzędziami takimi jak `Prettier`.
 
-2. **Prettier** to narzędzie do automatycznego formatowania kodu, często
-   używane razem z `ESLint`, aby zapewnić spójny styl kodu.
+2. **Prettier** to narzędzie do automatycznego formatowania kodu, często używane
+   razem z `ESLint`, aby zapewnić spójny styl kodu.
 
 3. **TSLint** to linter dla `TypeScript`, który można było używać również z
    `React`, chociaż obecnie jest wypierany przez `ESLint` ze względu na większą
    elastyczność i lepsze wsparcie.
 
-Te narzędzia pomagają utrzymywać wysoką jakość kodu i zapobiegać błędom w
-dużych projektach.
+Te narzędzia pomagają utrzymywać wysoką jakość kodu i zapobiegać błędom w dużych
+projektach.
 
 </details>
 
@@ -4999,8 +4996,8 @@ dużych projektach.
 #### React
 
 **Next.js** to framework oparty na React, który dostarcza gotowe rozwiązania do
-server-side rendering (SSR), static site generation (SSG), tras API,
-routingu, optymalizacji wydajności i SEO.
+server-side rendering (SSR), static site generation (SSG), tras API, routingu,
+optymalizacji wydajności i SEO.
 
 #### Główne możliwości:
 
@@ -5025,16 +5022,16 @@ e-commerce i złożonych interfejsów.
 
 #### Główne różnice między Next.js a React:
 
-| **Kryterium**                      | **React**                                | **Next.js**                                                              |
-| ---------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
-| **Typ**                            | Biblioteka do tworzenia UI               | Framework oparty na React                                                |
-| **Renderowanie**                   | Tylko klienckie (CSR)                    | Obsługuje CSR, SSR, SSG i ISR                                            |
-| **Routing**                        | Realizowany ręcznie, na przykład przez React Router | Routing oparty na plikach (`pages/` albo `app/`)                 |
-| **SEO**                            | Słabsze wsparcie przez CSR               | Dobre wsparcie SEO dzięki SSR i SSG                                      |
-| **Trasy API**                      | Brak                                     | Wbudowana możliwość tworzenia endpointów API (`pages/api/`)              |
-| **Cache**                          | Brak wbudowanych mechanizmów             | ISR pozwala aktualizować strony bez pełnej regeneracji                   |
-| **Optymalizacja wydajności**       | Wymaga rozwiązań zewnętrznych            | Wbudowane optymalizacje, takie jak code splitting i automatyczne ładowanie obrazów |
-| **Wsparcie komponentów serwerowych** | Zależy od konfiguracji                  | Wbudowane wsparcie React Server Components (`app/`)                      |
+| **Kryterium**                        | **React**                                           | **Next.js**                                                                        |
+| ------------------------------------ | --------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Typ**                              | Biblioteka do tworzenia UI                          | Framework oparty na React                                                          |
+| **Renderowanie**                     | Tylko klienckie (CSR)                               | Obsługuje CSR, SSR, SSG i ISR                                                      |
+| **Routing**                          | Realizowany ręcznie, na przykład przez React Router | Routing oparty na plikach (`pages/` albo `app/`)                                   |
+| **SEO**                              | Słabsze wsparcie przez CSR                          | Dobre wsparcie SEO dzięki SSR i SSG                                                |
+| **Trasy API**                        | Brak                                                | Wbudowana możliwość tworzenia endpointów API (`pages/api/`)                        |
+| **Cache**                            | Brak wbudowanych mechanizmów                        | ISR pozwala aktualizować strony bez pełnej regeneracji                             |
+| **Optymalizacja wydajności**         | Wymaga rozwiązań zewnętrznych                       | Wbudowane optymalizacje, takie jak code splitting i automatyczne ładowanie obrazów |
+| **Wsparcie komponentów serwerowych** | Zależy od konfiguracji                              | Wbudowane wsparcie React Server Components (`app/`)                                |
 
 #### Wniosek:
 
@@ -5062,8 +5059,8 @@ tytułów, Open Graph i podobnych elementów.
 2. **Dynamiczny `<head>`**: umożliwia zmianę tagów dla każdej strony bez
    przeładowania.
 
-3. **Wsparcie SSR (Server-Side Rendering)**: w przeciwieństwie do zwykłego
-   React Helmet, ta wersja poprawnie działa w aplikacjach SSR bez problemów z
+3. **Wsparcie SSR (Server-Side Rendering)**: w przeciwieństwie do zwykłego React
+   Helmet, ta wersja poprawnie działa w aplikacjach SSR bez problemów z
    asynchronicznością.
 
 #### Przyklad użycia:
@@ -5181,8 +5178,8 @@ function App() {
 
 - Wykorzystanie oddzielnych autonomicznych komponentów w różnych częściach
   aplikacji.
-- Na przykład różne zespoły rozwijają odrębne części dużego projektu w
-  `React`, `Vue` albo `Angular` i integrują je razem.
+- Na przykład różne zespoły rozwijają odrębne części dużego projektu w `React`,
+  `Vue` albo `Angular` i integrują je razem.
 
 #### Kiedy używać:
 
@@ -5201,8 +5198,8 @@ function App() {
 
 **Komponent przełączający (Switching Component)** w React to wzorzec, w którym
 komponent dynamicznie renderuje jeden ze swoich komponentów podrzędnych na
-podstawie określonego warunku. Stosuje się go wtedy, gdy trzeba wyświetlać
-różne komponenty zależnie od stanu, trasy albo otrzymanych danych.
+podstawie określonego warunku. Stosuje się go wtedy, gdy trzeba wyświetlać różne
+komponenty zależnie od stanu, trasy albo otrzymanych danych.
 
 #### Przykład 1: przełączanie na podstawie stanu
 
@@ -5279,8 +5276,8 @@ komponentów dzięki memoizacji.
 
 #### Jak działa Reselect?
 
-Reselect używa **memoizacji**, aby ponownie wykorzystywać wyniki obliczeń,
-jeśli dane wejściowe się nie zmieniły.
+Reselect używa **memoizacji**, aby ponownie wykorzystywać wyniki obliczeń, jeśli
+dane wejściowe się nie zmieniły.
 
 1. **Przyjmuje input selektory**, które pobierają dane ze stanu.
 
@@ -5467,13 +5464,13 @@ przekazane nieprawidłowe propsy.
 
 #### Co wybrać?
 
-| **Metoda**     | **Zalety**                              | **Wady**                                  |
-| -------------- | --------------------------------------- | ----------------------------------------- |
-| **PropTypes**  | Proste, działa w JavaScript             | Sprawdza tylko w runtime, słabsza kontrola |
+| **Metoda**     | **Zalety**                                | **Wady**                                        |
+| -------------- | ----------------------------------------- | ----------------------------------------------- |
+| **PropTypes**  | Proste, działa w JavaScript               | Sprawdza tylko w runtime, słabsza kontrola      |
 | **TypeScript** | Ścisłe typowanie, wcześniej wykrywa błędy | Wymaga kompilacji, ma bardziej złożoną składnię |
 
-Jeśli projekt używa **TypeScript**, **PropTypes** zwykle nie są potrzebne.
-Jeśli to **JavaScript**, **PropTypes** zapewniają podstawową walidację.
+Jeśli projekt używa **TypeScript**, **PropTypes** zwykle nie są potrzebne. Jeśli
+to **JavaScript**, **PropTypes** zapewniają podstawową walidację.
 
 </details>
 
@@ -5484,10 +5481,10 @@ Jeśli to **JavaScript**, **PropTypes** zapewniają podstawową walidację.
 
 Różnica między renderowaniem a montowaniem w React
 
-| **Proces**               | **Opis**                                                                                                                                                                                             |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Montowanie (Mounting)** | Komponent jest tworzony i dodawany do DOM po raz pierwszy. Wywoływane są `constructor`, `render`, `componentDidMount` w klasach albo `useEffect` z pustą tablicą zależności w komponentach funkcyjnych. |
-| **Renderowanie (Rendering)** | Następuje wywołanie `render()` albo ponowne wywołanie komponentu funkcyjnego w celu zaktualizowania zawartości. Dzieje się to przy zmianie `state`, `props` albo po wywołaniu `forceUpdate()`.     |
+| **Proces**                   | **Opis**                                                                                                                                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Montowanie (Mounting)**    | Komponent jest tworzony i dodawany do DOM po raz pierwszy. Wywoływane są `constructor`, `render`, `componentDidMount` w klasach albo `useEffect` z pustą tablicą zależności w komponentach funkcyjnych. |
+| **Renderowanie (Rendering)** | Następuje wywołanie `render()` albo ponowne wywołanie komponentu funkcyjnego w celu zaktualizowania zawartości. Dzieje się to przy zmianie `state`, `props` albo po wywołaniu `forceUpdate()`.          |
 
 #### Przykład montowania
 
@@ -5566,9 +5563,9 @@ function Counter() {
 
 #### Wniosek:
 
-- Reaktywny przepływ danych w React oznacza, że UI aktualizuje się
-  automatycznie przy zmianie stanu, ale z wykorzystaniem Virtual DOM i
-  batchowania aktualizacji dla optymalizacji.
+- Reaktywny przepływ danych w React oznacza, że UI aktualizuje się automatycznie
+  przy zmianie stanu, ale z wykorzystaniem Virtual DOM i batchowania
+  aktualizacji dla optymalizacji.
 
 </details>
 
@@ -5577,8 +5574,8 @@ function Counter() {
 
 #### React
 
-React nie jest w pełni reaktywną biblioteką, jak na przykład Vue albo Svelte.
-Ma jednak pewne cechy, które upodabniają go do reaktywnych frameworków:
+React nie jest w pełni reaktywną biblioteką, jak na przykład Vue albo Svelte. Ma
+jednak pewne cechy, które upodabniają go do reaktywnych frameworków:
 
 1. **Automatyczna aktualizacja UI**: React automatycznie aktualizuje interfejs,
    gdy zmienia się stan albo propsy komponentu, co przypomina podejście
@@ -5834,9 +5831,9 @@ wstawieniem.
 
 #### React
 
-W React warunkowe dodawanie klas do elementów zwykle realizuje się przez
-atrybut `className` oraz użycie operatora trójargumentowego albo funkcji
-określających warunki.
+W React warunkowe dodawanie klas do elementów zwykle realizuje się przez atrybut
+`className` oraz użycie operatora trójargumentowego albo funkcji określających
+warunki.
 
 #### Główne podejścia:
 
@@ -6014,7 +6011,8 @@ useEffect(() => {
 
 - `useEffect` ze zwracaną funkcją dla komponentów funkcyjnych.
 
-- `beforeunload` dla przypadków, w których trzeba reagować na opuszczenie strony.
+- `beforeunload` dla przypadków, w których trzeba reagować na opuszczenie
+  strony.
 
 </details>
 
@@ -6088,8 +6086,8 @@ function Counter() {
 #### React
 
 `React.lazy` i `React.Suspense` służą do **dynamicznego ładowania komponentów**
-w React, co pozwala realizować **code splitting**. Oznacza to, że części kodu
-są ładowane tylko wtedy, gdy są potrzebne, co poprawia wydajność aplikacji.
+w React, co pozwala realizować **code splitting**. Oznacza to, że części kodu są
+ładowane tylko wtedy, gdy są potrzebne, co poprawia wydajność aplikacji.
 
 #### Jak to działa:
 
@@ -6133,9 +6131,9 @@ function App() {
 
 - `React.lazy()` przyjmuje funkcję dynamicznie importującą moduł.
 
-- `React.Suspense` opakuje komponent używający `React.lazy()` i pokaże
-  zawartość zastępczą, w tym przypadku tekst "Ladowanie...", dopóki komponent
-  się nie załaduje.
+- `React.Suspense` opakuje komponent używający `React.lazy()` i pokaże zawartość
+  zastępczą, w tym przypadku tekst "Ladowanie...", dopóki komponent się nie
+  załaduje.
 
 #### Zalety:
 
@@ -6352,8 +6350,8 @@ export default useFetch;
 
 - **Fetch API:** do prostych zapytań.
 
-- **Axios:** jeśli potrzebna jest większa elastyczność, na przykład
-  interceptory albo timeouty.
+- **Axios:** jeśli potrzebna jest większa elastyczność, na przykład interceptory
+  albo timeouty.
 
 - **React Query:** do zarządzania cache danych.
 
@@ -6368,10 +6366,10 @@ export default useFetch;
 
 #### React
 
-| **Metoda**            | **Opis**                                                                                     | **Główne zastosowanie**                                                                 |
-| --------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `React.createElement` | Tworzy nowy element React. Przyjmuje typ elementu, propsy i elementy potomne jako argumenty. | Służy do tworzenia elementów React od zera, zwykle podczas renderowania JSX.            |
-| `React.cloneElement`  | Klonuje istniejący element React, pozwalając zmienić jego propsy albo elementy potomne.     | Służy do tworzenia zmodyfikowanych kopii już istniejących elementów React.               |
+| **Metoda**            | **Opis**                                                                                     | **Główne zastosowanie**                                                      |
+| --------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `React.createElement` | Tworzy nowy element React. Przyjmuje typ elementu, propsy i elementy potomne jako argumenty. | Służy do tworzenia elementów React od zera, zwykle podczas renderowania JSX. |
+| `React.cloneElement`  | Klonuje istniejący element React, pozwalając zmienić jego propsy albo elementy potomne.      | Służy do tworzenia zmodyfikowanych kopii już istniejących elementów React.   |
 
 #### Przykłady:
 
@@ -6505,9 +6503,8 @@ webowych.
 3. **Jednokierunkowy przepływ danych:** Dane płyną tylko w jednym kierunku, co
    może utrudniać przekazywanie ich przez wiele poziomów komponentów.
 
-4. **Reaktywność:** React aktualizuje DOM przez Virtual DOM, ale w bardzo
-   dużych i dynamicznych aplikacjach nie zawsze jest to najefektywniejsze
-   rozwiązanie.
+4. **Reaktywność:** React aktualizuje DOM przez Virtual DOM, ale w bardzo dużych
+   i dynamicznych aplikacjach nie zawsze jest to najefektywniejsze rozwiązanie.
 
 5. **Zależność od JavaScript:** Bez JavaScript po stronie klienta wsparcie jest
    ograniczone.
@@ -6551,8 +6548,8 @@ register();
   usunięty już wcześniej razem z Create React App 4. Jeśli potrzebujesz Service
   Workera, rejestruj go ręcznie.
 
-Wniosek: w nowoczesnych projektach ten mechanizm nie jest już aktualny i
-Service Worker trzeba skonfigurować samodzielnie.
+Wniosek: w nowoczesnych projektach ten mechanizm nie jest już aktualny i Service
+Worker trzeba skonfigurować samodzielnie.
 
 </details>
 
@@ -6759,15 +6756,15 @@ Oto krótka historia ewolucji React:
 
 8. **2020**
 
-- Wydano React 17. Głównym celem było uproszczenie stopniowej aktualizacji
-  React w dużych projektach.
+- Wydano React 17. Głównym celem było uproszczenie stopniowej aktualizacji React
+  w dużych projektach.
 
 - Dodano wsparcie dla nowoczesnych narzędzi i nowych możliwości pracy z JSX.
 
 9. **2022**
 
-- Wydano React 18. Najważniejszymi nowościami były Concurrent Rendering oraz
-  API `useTransition` i `useDeferredValue`, poprawiające wydajność dynamicznych
+- Wydano React 18. Najważniejszymi nowościami były Concurrent Rendering oraz API
+  `useTransition` i `useDeferredValue`, poprawiające wydajność dynamicznych
   aplikacji.
 
 10. **2024**
@@ -6803,8 +6800,8 @@ rozwojowi wspieranemu przez Meta.
 
 #### React
 
-React 19 wprowadził szereg istotnych zmian ukierunkowanych na poprawę
-wydajności i wygody pracy programistów. Oto najważniejsze nowości:
+React 19 wprowadził szereg istotnych zmian ukierunkowanych na poprawę wydajności
+i wygody pracy programistów. Oto najważniejsze nowości:
 
 1. **Nowy system renderowania:** Wprowadzono renderowanie asynchroniczne, które
    pozwala React skuteczniej zarządzać aktualizacjami interfejsu i poprawiać
@@ -6824,9 +6821,9 @@ wydajności i wygody pracy programistów. Oto najważniejsze nowości:
 5. **Hook `use`:** Nowy hook upraszczający pracę z danymi asynchronicznymi i
    poprawiający wsparcie dla komponentów serwerowych.
 
-6. **Natywne wsparcie metatagów:** Teraz `meta`, `title`, `link` i inne
-   metatagi są wspierane bez dodatkowych bibliotek, co upraszcza zarządzanie
-   SEO i zasobami.
+6. **Natywne wsparcie metatagów:** Teraz `meta`, `title`, `link` i inne metatagi
+   są wspierane bez dodatkowych bibliotek, co upraszcza zarządzanie SEO i
+   zasobami.
 
 - Te nowości czynią React 19 potężniejszym i wygodniejszym narzędziem dla
   programistów, poprawiając zarówno wydajność aplikacji, jak i komfort pracy.
@@ -6846,9 +6843,8 @@ hostingach bez potrzeby utrzymywania serwera.
 
 #### Zalecane frameworki:
 
-1. **Next.js:** Oferuje rozbudowane możliwości, takie jak server-side
-   rendering i generowanie statycznych stron, zapewniając wysoką wydajność i
-   dobre SEO.
+1. **Next.js:** Oferuje rozbudowane możliwości, takie jak server-side rendering
+   i generowanie statycznych stron, zapewniając wysoką wydajność i dobre SEO.
 
 2. **React Router:** Umożliwia tworzenie SPA z dynamicznym routingiem, dzięki
    czemu łatwo zarządzać nawigacją w aplikacji.
@@ -6866,8 +6862,8 @@ hostingach bez potrzeby utrzymywania serwera.
 
 `useDeferredValue` to hook React, który pojawił się w React 18 jako część
 Concurrent Mode. Pozwala odraczać aktualizacje określonych wartości, takich jak
-stan czy propsy, obniżając ich priorytet i umożliwiając Reactowi najpierw
-zająć się ważniejszymi zadaniami interfejsu.
+stan czy propsy, obniżając ich priorytet i umożliwiając Reactowi najpierw zająć
+się ważniejszymi zadaniami interfejsu.
 
 Jest to bardzo przydatne wtedy, gdy wartość często się zmienia, a aktualizacja
 interfejsu przy każdej zmianie jest kosztowna.
@@ -6889,8 +6885,8 @@ const deferredValue = useDeferredValue(value);
 ```
 
 - React od razu aktualizuje krytyczne, priorytetowe zmiany.
-- Odroczona wartość (`deferredValue`) jest aktualizowana asynchronicznie po
-  tym, jak React obsłuży pilniejsze zadania.
+- Odroczona wartość (`deferredValue`) jest aktualizowana asynchronicznie po tym,
+  jak React obsłuży pilniejsze zadania.
 - Jeśli aktualizacje głównej wartości następują zbyt szybko, React może pominąć
   niektóre wartości pośrednie i przejść od razu do ostatniej.
 
@@ -6924,8 +6920,8 @@ function SearchList({ items }) {
 }
 ```
 
-Może to powodować przycięcia, jeśli lista jest bardzo duża, ponieważ przy
-każdym wpisanym znaku React natychmiast przelicza przefiltrowane wyniki.
+Może to powodować przycięcia, jeśli lista jest bardzo duża, ponieważ przy każdym
+wpisanym znaku React natychmiast przelicza przefiltrowane wyniki.
 
 ###### Z użyciem `useDeferredValue`:
 
