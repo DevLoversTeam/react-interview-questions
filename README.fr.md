@@ -1,6 +1,6 @@
 **Read in other languages: [English 🇺🇸](README.en.md),
 [Polska 🇵🇱](README.pl.md), [German 🇩🇪](README.de.md), [French 🇫🇷](README.fr.md),
-[Ukrainien 🇺🇦](README.md).**
+[Spanish 🇪🇸](README.es.md), [Українська 🇺🇦](README.md).**
 
 <h1>
   React <img src="./assets/react.svg" width="40" height="40" />
