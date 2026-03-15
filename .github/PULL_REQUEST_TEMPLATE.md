@@ -1,16 +1,19 @@
-<!-- Дякуємо за ваш внесок у DevLovers 🎉 -->
+<!-- Thank you for your contribution to DevLovers 🎉 -->
 
-<!-- Ці коментарі є лише підказкою — вони не будуть видимі у створеному pull request -->
+<!-- These comments are just a hint - they will not be visible in the created pull request -->
 
-Чекліст:
+Checklist:
 
-- [ ] Я ознайомився з [CONTRIBUTING.md](CONTRIBUTING.md) і дотримувався вказівок.
-- [ ] Моє доповнення не дублює вже існуюче питання чи відповідь.
-- [ ] Я додав(ла) нове запитання у відповідному форматі (див. існуючі приклади).
-- [ ] Я додав(ла) нове запитання **в кінець файлу** з **наступним за порядком номером**.
+- [ ] I have read [CONTRIBUTING.md](CONTRIBUTING.md) and followed the
+      instructions.
+- [ ] My addition does not duplicate an existing question or answer.
+- [ ] I have added a new question in the appropriate format (see existing
+      examples).
+- [ ] I have added a new question **at the end of the file** with the **next
+      number**.
 
 ---
 
-<!-- Будь ласка, коротко опишіть, що саме ви додаєте або змінюєте, і чому це варте включення. -->
+<!-- Please briefly describe what exactly you are adding or changing, and why it is worth including. -->
 
 ...
